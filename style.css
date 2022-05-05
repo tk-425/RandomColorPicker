@@ -10,20 +10,13 @@
 .main-left {
   background-color: black;
   color: white;
-  width: 480px;
+  width: 570px;
 }
 
 .main-left * {
   margin: 0;
   padding-left: 30px;
   padding-top: 20px;
-}
-
-.main-right a {
-  font-size: 24px;
-  text-decoration: none;
-  color: black;
-  border-bottom: 2px solid;
 }
 
 #button {
@@ -38,5 +31,30 @@
   padding: 15px;
   margin-left: 30px;
   margin-top: 20px;
-  margin-bottom: 25px;
 }
+
+.main-left p {
+  margin-bottom: 24px;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-right a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid;
+  align-self: flex-end;
+  margin-bottom: 15px;
+}
+
+.main-right .view-home {
+  font-size: 24px;
+}
+
+.main-right .view-github {
+  font-size: 20px;
+}
+

@@ -5,8 +5,20 @@ const button = document.getElementById(`button`);
 const hexClass = document.getElementById(`hex-color`);
 const rgbClass = document.getElementById(`rgb-color`);
 
-// event listener
-button.addEventListener(`click`, function () {
+function getRandomNumber() {
+  return Math.floor(Math.random() * hex.length);
+}
+
+function getHexToDecimal(hexValue) {
+  return parseInt(getLastTwoHexValue(hexValue), 16);
+}
+
+// get the only last two digits from the hexColor value
+function getLastTwoHexValue(hexValue) {
+  return hexValue.slice(-2);
+}
+
+function getColor() {
   let hexColor = ``;
   let rgbColor = ``;
 
@@ -32,17 +44,15 @@ button.addEventListener(`click`, function () {
 
   // update the rgb color value
   rgbClass.textContent = `(` + rgbColor;
+}
+
+// event listener
+button.addEventListener(`click`, function () {
+  getColor();
 });
 
-function getRandomNumber() {
-  return Math.floor(Math.random() * hex.length);
-}
-
-function getHexToDecimal(hexValue) {
-  return parseInt(getLastTwoHexValue(hexValue), 16);
-}
-
-// get the only last two digits from the hexColor value
-function getLastTwoHexValue(hexValue) {
-  return hexValue.slice(-2);
-}
+document.addEventListener(`keypress`, (e) => {
+  if (e.code.toLowerCase() === `space`) {
+    getColor();
+  }
+});
