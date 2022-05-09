@@ -18,6 +18,9 @@ function getLastTwoHexValue(hexValue) {
   return hexValue.slice(-2);
 }
 
+// calculate complementary colors
+//
+
 function getColor() {
   let hexColor = ``;
   let rgbColor = ``;
@@ -40,6 +43,7 @@ function getColor() {
   hexColor = `#` + hexColor;
   hexClass.textContent = hexColor;
   hexClass.style.color = hexColor;
+  rgbClass.style.color = hexColor;
   document.body.style.backgroundColor = hexColor;
 
   // update the rgb color value
@@ -52,7 +56,7 @@ button.addEventListener(`click`, function () {
 });
 
 document.addEventListener(`keypress`, (e) => {
-  if (e.code.toLowerCase() === `space`) {
+  if (e.code.toLowerCase() === `enter`) {
     getColor();
   }
 });

@@ -4,24 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Random Color Picker</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   </head>
   <body>
-    <div class="main-container">
-      <div class="main-left">
-        <h1>Random Color Picker</h1>
-        <h2>Hex Color : <span id="hex-color">#FFFFFF</span></h2>
-        <h2>RGB Color : <span id="rgb-color">(255, 255, 255)</span></h2>
-        <button id="button">Change Color</button>
-        <p>Press the Button or Space Bar to generate a new color</p>
-      </div>
+    <nav>
+      <a class="home" href="https://tk-425.github.io/">Home</a>
 
-      <div class="main-right">
-        <a class="view-home" href="https://tk-425.github.io/">Home</a>
-        <a class="view-github" href="https://github.com/tk-425/RandomColorPicker">View on Github</a>
+      <a class="github" href="https://github.com/tk-425/RandomColorPicker"
+        >View on Github</a
+      >
+    </nav>
+
+    <div class="container">
+      <div class="main">
+        <h1>Random Color Picker</h1>
+
+        <h2>Hex Color</h2>
+        <p id="hex-color">#FFFFFF</p>
+
+        <h2>RGB Color</h2>
+        <p id="rgb-color">(255, 255, 255)</p>
+
+        <button id="button">Change Color</button>
+
+        <p>Press the Button or Enter key<span id="symbol">⏎</span>to generate a new color</p>
       </div>
     </div>
     <script src="script.js"></script>
