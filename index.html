@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Random Color Picker</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/favicon/icon.png" />
   </head>
   <body>
     <nav>
-      <a class="home" href="https://tk-425.github.io/">Home</a>
+      <a class="home navLink" href="https://tk-425.github.io/">Home</a>
 
-      <a class="github" href="https://github.com/tk-425/RandomColorPicker"
-        >View on Github</a
+      <a
+        class="github navLink"
+        href="https://github.com/tk-425/RandomColorPicker"
+        >Github</a
       >
     </nav>
 
@@ -27,11 +29,21 @@
         <h2>RGB Color</h2>
         <p id="rgb-color">(255, 255, 255)</p>
 
+        <h2>Complementary Color</h2>
+        <p id="comp-hex-color">#000000</p>
+        <p id="comp-rgb-color">(0, 0, 0)</p>
+
         <button id="button">Change Color</button>
 
-        <p>Press the Button or Enter key<span id="symbol">⏎</span>to generate a new color</p>
+        <p>
+          Press the Button or Enter key<span id="symbol">⏎</span>to generate a
+          new color
+        </p>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
+    <!-- TinyColor JS color tool
+      Source: https://github.com/bgrins/TinyColor -->
+    <script type="text/javascript" src="script/tinycolor.js"></script>
   </body>
 </html>
