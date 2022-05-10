@@ -66,10 +66,6 @@ nav a:hover {
   padding: 15px;
 }
 
-#symbol {
-  font-size: 20px;
-}
-
 @media (max-width: 480px) {
   nav {
     flex-direction: column;
